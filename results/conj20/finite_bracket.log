@@ -1,0 +1,8 @@
+n=0..500 on [4.873507585386735,4.873507585386735]: divided at A for 0 indices; problems []; 165s
+n=501..600 on [4.873507585386735,4.873507585386735]: divided at A for 0 indices; problems []; 140s
+n=601..680 on [4.873507585386735,4.873507585386735]: divided at A for 0 indices; problems []; 168s
+n=681..740 on [4.873507585386735,4.873507585386735]: divided at A for 0 indices; problems []; 167s
+n=741..790 on [4.873507585386735,4.873507585386735]: divided at A for 0 indices; problems []; 171s
+n=791..830 on [4.873507585386735,4.873507585386735]: divided at A for 0 indices; problems []; 158s
+n=831..865 on [4.873507585386735,4.873507585386735]: divided at A for 0 indices; problems []; 157s
+n=866..897 on [4.873507585386735,4.873507585386735]: divided at A for 0 indices; problems [(897, [('end', 4.873507585386735), ('roots', 1)])]; 154s

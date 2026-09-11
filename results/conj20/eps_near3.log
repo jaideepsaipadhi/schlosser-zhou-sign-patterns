@@ -1,0 +1,6 @@
+side 1 r 2 criterion True margin [6.78e+8 +/- 2.33e+5] sign 1 pattern +
+side 1 r 4 criterion True margin [7.49e+8 +/- 2.00e+4] sign -1 pattern -
+side 1 r 5 criterion True margin [7.29e+8 +/- 2.95e+4] sign -1 pattern -
+side -1 r 2 criterion True margin [6.78e+8 +/- 2.33e+5] sign -1 pattern -
+side -1 r 4 criterion True margin [7.49e+8 +/- 2.00e+4] sign 1 pattern +
+side -1 r 5 criterion True margin [7.29e+8 +/- 2.95e+4] sign 1 pattern +

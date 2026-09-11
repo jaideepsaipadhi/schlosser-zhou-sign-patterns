@@ -1,0 +1,10 @@
+type (1,1) L=8  lower=23.183987  box upper=23.647422  tail(y>=6) upper=2.476920  => K=23.647422  boxes=2774  0s
+type (1,1) L=8  lower=23.183987  box upper=23.646904  tail(y>=6) upper=2.476920  => K=23.646904  boxes=3467  1s
+type (0,0) L=4  lower=1.832801  box upper=1.867034  tail(y>=6) upper=1.000228  => K=1.867034  boxes=682  1s
+type (1,1) L=8  lower=1.000000  box upper=1.019795  tail(y>=6) upper=0.424778  => K=1.019795  boxes=1643  1s
+type (2,2) L=2  lower=1.090155  box upper=1.111685  tail(y>=6) upper=1.000000  => K=1.111685  boxes=1583  2s
+type (0,0) L=4  lower=1.832801  box upper=1.867034  tail(y>=6) upper=1.000228  => K=1.867034  boxes=682  2s
+type (1,1) L=8  lower=1.000000  box upper=1.019698  tail(y>=6) upper=0.424778  => K=1.019698  boxes=1523  2s
+type (2,2) L=2  lower=1.090155  box upper=1.111882  tail(y>=6) upper=1.000000  => K=1.111882  boxes=1550  2s
+type (6,2) L=2  lower=0.043295  box upper=0.044158  tail(y>=6) upper=0.000000  => K=0.044158  boxes=1016  2s
+K_NG_inverse (certified upper bound) = 23.647422313690186

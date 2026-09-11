@@ -1,0 +1,4 @@
+degenerate ratio sum at n=20000: [2.90e-20 +/- 1.86e-23]
+nondegenerate ratio sum: [3.72e-19 +/- 3.81e-22]
+gaps: main vs k24 = [0.224 +/- 4.49e-5] (>0; all other ratios are poly(y)e^{-gy})
+check cmin: 0.1503430762850699

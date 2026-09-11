@@ -1,0 +1,16 @@
+check                                                              n1   y(n1)    gap g      a/g  status
+G7 dominance [2,3)                                                898   42.36   0.3479    14.37  OK
+G7 dominance (3,4.87]                                             898   42.35   0.3990    12.53  OK
+G7 dominance [4.87,4.87350758538]                                 898   42.35   0.7001     7.14  OK
+G7 window, residues !=1                                           898   42.35   0.7006     7.14  OK
+G7 window residue 1 (n>=2500)                                    2500   70.69   0.7006     7.14  OK
+G7 derivative (window)                                            898   42.35   0.7006     7.14  OK
+G7 eps near 3                                                     898   42.36   0.5497     9.10  OK
+G7 delta=1                                                        400   28.28   0.3173    15.76  OK
+G7 delta=3                                                        400   28.26   0.5497     9.10  OK
+G7 delta=5 (main-dominated residues)                              400   28.24   0.7096     7.05  OK
+G11 dominance [gamma,2]                                           300   24.46   0.3227    15.49  OK
+G11 delta=1                                                       600   34.63   0.2607    19.18  OK
+G11 delta=3                                                       600   34.60   0.4516    11.07  OK
+G7 delta=5 corr-dominant (exact zeros used)                       400   28.24   0.2799    17.86  OK
+ALL HYPOTHESES SATISFIED: True

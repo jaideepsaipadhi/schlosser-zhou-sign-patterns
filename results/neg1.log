@@ -1,0 +1,8 @@
+res 0  c_{-1}=0 at 0 of 51  nonzero idx [0, 8, 16, 24, 32]  sign(c_-1) on nonzero {1}  sign(dc/dδ) on zeros set()  first zero-der []
+res 1  c_{-1}=0 at 0 of 50  nonzero idx [1, 9, 17, 25, 33]  sign(c_-1) on nonzero {1}  sign(dc/dδ) on zeros set()  first zero-der []
+res 2  c_{-1}=0 at 0 of 50  nonzero idx [2, 10, 18, 26, 34]  sign(c_-1) on nonzero {1}  sign(dc/dδ) on zeros set()  first zero-der []
+res 3  c_{-1}=0 at 50 of 50  nonzero idx []  sign(c_-1) on nonzero set()  sign(dc/dδ) on zeros {-1}  first zero-der []
+res 4  c_{-1}=0 at 1 of 50  nonzero idx [12, 20, 28, 36, 44]  sign(c_-1) on nonzero {-1}  sign(dc/dδ) on zeros {-1}  first zero-der []
+res 5  c_{-1}=0 at 0 of 50  nonzero idx [5, 13, 21, 29, 37]  sign(c_-1) on nonzero {-1}  sign(dc/dδ) on zeros set()  first zero-der []
+res 6  c_{-1}=0 at 0 of 50  nonzero idx [6, 14, 22, 30, 38]  sign(c_-1) on nonzero {-1}  sign(dc/dδ) on zeros set()  first zero-der []
+res 7  c_{-1}=0 at 50 of 50  nonzero idx []  sign(c_-1) on nonzero set()  sign(dc/dδ) on zeros {1}  first zero-der []

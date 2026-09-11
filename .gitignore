@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+code/orbit.pkl
+code/supK.pkl
+code/supKinv.pkl
+paper/*.aux
+paper/*.log
+paper/*.out
+paper/*.fls
+paper/*.fdb_latexmk

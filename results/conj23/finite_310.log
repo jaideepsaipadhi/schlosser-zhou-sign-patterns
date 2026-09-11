@@ -1,0 +1,3 @@
+factor containing gamma: degree 18  roots in (1.5,2): ['[1.7584535519419110333 +/- 1.02e-20]']
+P18 sign change in (G_lo,G_hi): True  roots of P18 in [G_hi,2]: []
+n<=310 on [gamma_lo,2]: notes [(7, 2), (13, 2), (15, 2), (18, 2), 'c21/P18', (40, 2)]; problems []

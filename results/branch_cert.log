@@ -1,0 +1,6 @@
+h/k=3/8  Arg c/pi=[0.37500000 +/- 3e-13]  (Lex-Lloc)/(2 pi i)=[+/- 5.54e-47] + [+/- 4.53e-45]j  -> m=0 certified:True
+h/k=5/8  Arg c/pi=[0.62500000 +/- 3e-13]  (Lex-Lloc)/(2 pi i)=[+/- 6.84e-47] + [+/- 4.53e-45]j  -> m=0 certified:True
+h/k=3/16  Arg c/pi=[-0.31250000 +/- 1e-13]  (Lex-Lloc)/(2 pi i)=[+/- 2.93e-45] + [+/- 5.36e-45]j  -> m=0 certified:True
+h/k=5/16  Arg c/pi=[-0.18750000 +/- 1e-13]  (Lex-Lloc)/(2 pi i)=[+/- 3.03e-45] + [+/- 5.47e-45]j  -> m=0 certified:True
+h/k=11/16  Arg c/pi=[-0.81250000 +/- 3e-13]  (Lex-Lloc)/(2 pi i)=[1.00000 +/- 3e-11] + [+/- 6.28e-45]j  -> m=1 certified:True
+h/k=13/16  Arg c/pi=[-0.68750000 +/- 3e-13]  (Lex-Lloc)/(2 pi i)=[1.00000 +/- 3e-11] + [+/- 6.39e-45]j  -> m=1 certified:True
