@@ -1,0 +1,285 @@
+\documentclass[11pt]{amsart}
+\usepackage[margin=1.1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,booktabs,enumitem}
+\usepackage[hidelinks]{hyperref}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\Z}{\mathbb Z}\newcommand{\Q}{\mathbb Q}\newcommand{\C}{\mathbb C}
+\newcommand{\Rea}{\operatorname{Re}}\newcommand{\Ima}{\operatorname{Im}}
+\newcommand{\cP}{\mathcal P}\newcommand{\cE}{\mathcal E}\newcommand{\e}{\mathrm e}
+\newcommand{\sgn}{\operatorname{sgn}}\newcommand{\Arg}{\operatorname{Arg}}
+
+\title[Sign patterns of real powers of infinite products]{Sign patterns of real powers of infinite products: resolution of Conjectures 20, 23 and 24 of Schlosser and Zhou}
+\author{Jaideep Sai Padhi}
+\address{Department of Computer Science, Purdue University, West Lafayette, IN, USA}
+\email{jpadhi@purdue.edu}
+\date{\today}
+
+\begin{document}
+\begin{abstract}
+Schlosser and Zhou conjectured precise sign patterns for the coefficients of real powers $P(q)^\delta$ of several infinite products. We settle three of their conjectures: those for the Borwein products $G_7=(q;q)_\infty/(q^7;q^7)_\infty$ and $G_{11}$, and for $Q_{12}=(q,q^{11};q^{12})_\infty/(q^5,q^7;q^{12})_\infty$.
+\begin{itemize}[leftmargin=1.5em]
+\item The conjecture for $G_{11}$ is true.
+\item The conjecture for $G_7$ fails exactly for $\delta_c<\delta<5$, where $\delta_c=4.873507585386734263\ldots$ is a root of the $897$-th coefficient polynomial. It holds at $\delta=5$ and on all other stated ranges.
+\item The conjecture for $Q_{12}$ holds for $\delta=\pm1$ and for $2\le\delta\le3$. In the range $-1<\delta<0$ it holds exactly for $-1<\delta\le\delta_1$, where $\delta_1=-0.644113480813\ldots$ is a root of the $22$nd coefficient polynomial.
+\end{itemize}
+In each failure a secondary term of the circle-method expansion, carrying the wrong sign, overtakes a leading amplitude that vanishes nearby. The proofs combine explicit Rademacher expansions, with all constants certified in ball arithmetic, and exact polynomial computations for small $n$. They use the framework of a companion paper on the G\"ollnitz--Gordon product.
+\end{abstract}
+\maketitle
+
+\section{Introduction}
+For a product $P(q)=\prod_{m\ge1}(1-q^m)^{\epsilon(m)}$ and $\delta\in\mathbb R$ write $P(q)^\delta=\exp(\delta\log P)=\sum_nc_\delta(n)q^n$, where $\log P(0)=0$. Taking logarithmic derivatives gives
+\[
+n\,c_\delta(n)=\delta\sum_{k\le n}b_kc_\delta(n-k),\qquad b_k=-\sum_{d\mid k}\epsilon(d)\,d .
+\]
+In particular each $c_\delta(n)$ is a polynomial in $\delta$ with rational coefficients.
+
+Schlosser and Zhou \cite[Appendix A]{SZ} conjectured the sign patterns listed below. As in \cite{SZ}, a sign pattern allows zero coefficients.
+\begin{itemize}[leftmargin=2em]
+\item \textbf{Conjecture 20} ($P=G_7$). The pattern is $+--00+0$ for $\delta=1$; $+--+++-$ for $2\le\delta<3$; $+-0+00-$ for $\delta=3$; and $+-++---$ for $3<\delta\le5$.
+\item \textbf{Conjecture 23} ($P=G_{11}$). The pattern is $+--0-+0+000$ for $\delta=1$; $+--+++-+--+$ for $\gamma\le\delta\le2$; and $+-0+-0-000+$ for $\delta=3$. Here $\gamma=1.7584535519419110333\ldots$ is the root in $(1.5,2)$ of $c_{\delta}(21)$.
+\item \textbf{Conjecture 24} ($P=Q_{12}$). The pattern is $+-+0-+-+-0+-$ for $\delta=1$; $+-+--+-+-++-$ for $2\le\delta\le3$; $+++++0-----0$ for $\delta=-1$; and $+++++------+$ for $-1<\delta<0$.
+\end{itemize}
+The printed strings in \cite{SZ} are partly illegible in electronic form. The patterns above are the ones determined by the coefficients: they agree with every coefficient we computed, and the forced zeros come from classical identities (\S\ref{sec:zeros}).
+
+\begin{theorem}\label{thm:20}
+Let $\delta_c=4.87350758538673426336\ldots$ be the unique root of $c_\delta(897)$ (for $G_7$) in an interval of width $1.3\cdot10^{-19}$ around this value. Conjecture 20 holds for $\delta=1$, for $2\le\delta\le3$, for $3<\delta\le\delta_c$, and for $\delta=5$. It fails for every $\delta\in(\delta_c,5)$.
+\end{theorem}
+
+\begin{theorem}\label{thm:23}
+Conjecture 23 holds.
+\end{theorem}
+
+\begin{theorem}\label{thm:24}
+Conjecture 24 holds for $\delta=\pm1$ and for $2\le\delta\le3$. For $-1<\delta<0$ the pattern $+++++------+$ holds if and only if $\delta\le\delta_1$, where $\delta_1=-0.644113480813476518842928\ldots$ is the unique root of $c_\delta(22)$ in $(-1,0)$. For instance, $c_{-1/4}(6)=545/65536>0$ even though the pattern requires a minus sign at $n=6$.
+\end{theorem}
+
+Together with the companion paper \cite{P1}, which treats Conjecture 21 (the G\"ollnitz--Gordon product $Q_8$), and earlier work of He--Li \cite{HL} and Bringmann--Heim--Kane \cite{BHK}, every conjecture of \cite[Appendix A]{SZ} is now resolved: Conjectures 17--19 and 22 were settled in \cite{HL,BHK}. For integer exponents with $m(t-1)\le24$, complete sign characterizations of $G_t^m$ were obtained by Wang \cite{W}; this covers $\delta\in\{1,2,3,4\}$ for $G_7$. Our certificates for these integer cases are independent of \cite{W}.
+
+\subsection*{The mechanism of failure}
+For $G_7$ at residue $n\equiv1\pmod7$ three terms compete:
+\begin{itemize}[leftmargin=2em]
+\item the leading term, at the cusps of denominator $7$. Its amplitude $A_7(1,\delta)$ vanishes at $\delta^*=4.8735075853867550889\ldots$.
+\item the leading term at the cusps of denominator $14$. Its amplitude is $\pm0.0195$, with the wrong sign for $n\equiv1\pmod{14}$.
+\item the correction term, which grows for $\delta>4$ and has the correct sign.
+\end{itemize}
+Just below $\delta^*$ the wrong-sign term wins on a window of $n$ bounded on both sides, and the window first becomes nonempty at $n=897$. The true threshold $\delta_c$ is therefore a root of $c_\delta(897)$, lying $2.1\cdot10^{-14}$ below $\delta^*$. This is the phenomenon behind the threshold $8/3$ in \cite{P1}, but it is realized at finite $n$. For $Q_{12}$ with $-1<\delta<0$ the failure is a plain small-coefficient phenomenon: $c_\delta(22)$ changes sign at $\delta_1$ and remains of the wrong sign on $(\delta_1,0)$.
+
+\section{Forced zeros and exact vanishing}\label{sec:zeros}
+\begin{itemize}[leftmargin=2em]
+\item The zeros of $G_7^\delta$ at $\delta=1$ (residues $3,4,6$) and of $G_{11}$ at $\delta=1$ (residues $3,6,8,9,10$) follow from Euler's pentagonal number theorem: $m(3m-1)/2$ avoids these residues, and $(q^p;q^p)_\infty$ is a series in $q^p$.
+\item The zeros at $\delta=3$ (residues $2,4,5$ for $G_7$, and $2,5,7,8,9$ for $G_{11}$) follow in the same way from Jacobi's identity $(q;q)_\infty^3=\sum(-1)^m(2m+1)q^{m(m+1)/2}$; see also \cite[Cor.~13]{SZ}.
+\item For $Q_{12}^{\pm1}$ the zeros at $n\equiv3\pmod6$, respectively $n\equiv5\pmod6$, are instances of the Andrews--Bressoud vanishing theorem \cite{AB}.
+\end{itemize}
+
+\section{Transformation formulae and cusp structure}
+\subsection{Borwein products}
+We use the transformation of \cite[Prop.~7]{SZ}, which follows from the classical eta transformation. There is one correction: the auxiliary integer must satisfy $hh'\equiv-1\pmod k$, the Hardy--Ramanujan convention, not $hh'\equiv1$.
+
+Let $\tau=h/k+iz/k^2$ and $d=\gcd(p,k)$. Then
+\[
+G_p(\e^{2\pi i\tau})^\delta=\Big(\frac pd\Big)^{\delta/2}\e^{\pi i\delta(-s(h,k)+s(ph/d,k/d))}\exp\Big(\frac{\pi\delta(d^2-p)}{12pz}-\frac{(p-1)\pi\delta z}{12k^2}\Big)\widehat G^\delta,
+\]
+where
+\[
+\widehat G=\frac{f(\e^{2\pi idh'_d/k-2\pi d^2/(pz)})}{f(\e^{2\pi ih'/k-2\pi/z})},\qquad f(x)=\prod_{m\ge1}(1-x^m)^{-1},
+\]
+and all powers are principal.
+
+\begin{lemma}[certified branch]\label{lem:branch}
+Consider every cusp $h/k$ with $k\in\{7,14,21,28\}$ for $p=7$, or $k\in\{11,22\}$ for $p=11$. For each, the difference between $\log G_p(\tau)$, computed from its $q$-series, and the logarithm of the right-hand side, built from principal logarithms and the series for $\log f$, is $2\pi i\cdot0$ on the connected set $\{\Rea z>0,\ \Rea(1/z)\ge1\}$.
+\end{lemma}
+\begin{proof}
+Both sides are continuous on this set, and their difference lies in $2\pi i\Z$, so it is constant. At $z=1$ it was evaluated in $200$-bit ball arithmetic, with explicit tail bounds, and has modulus at most $10^{-19}$. With the convention $hh'\equiv+1$ the same difference is about $5.8\cdot10^{-4}$, which is not an integer; this confirms the corrected convention.
+\end{proof}
+
+When $p\mid k$ we have $\widehat G=1-\e(-h'/k)\e^{-2\pi/z}+\cdots$, with $hh'\equiv1$ in this display. The main term grows like $\e^{\pi\delta(p-1)/(12z)}$, and the correction term like $\e^{\pi(\delta(p-1)/12-2)/z}$. The correction term therefore grows exactly when $\delta>24/(p-1)$; for $p=7$ this means $\delta>4$. When $p\nmid k$ the cusp is bounded:
+\[
+|G_p^\delta|\le K_p^\delta,\qquad K_p=\sqrt p\,\e^{-\pi(p-1)/(12p)}f(\e^{-2\pi/p})f(\e^{-2\pi}),
+\]
+so that $K_7=4.8195$ and $K_{11}=13.734$.
+
+\subsection{The theta quotient $Q_{12}$}
+Put $\vartheta_c(\tau)=\sum_{J\equiv c\,(48)}\e(\tau J^2/96)$. Then
+\[
+Q_{12}=q^{-1}\,\frac{\vartheta_{10}-\vartheta_{14}}{\vartheta_2-\vartheta_{22}}.
+\]
+As in \cite{P1}, the projective orbit of the pair of numerator and denominator under the Weil representation at level $96$ was computed exactly in $\Z[\zeta_{192}]$, modulo $\Phi_{192}=x^{64}-x^{32}+1$.
+\begin{itemize}[leftmargin=2em]
+\item The orbit has $48$ elements and $10$ cusp types.
+\item Exactly one type grows for $\delta>0$. Its leading exponents are $(J_1,J_5)=(2,10)$, its support is $J\equiv\pm2,\pm10\pmod{24}$, and all its coefficients have equal modulus. Exactly one type grows for $\delta<0$, namely the inverse type.
+\item An elementary Gauss-sum argument, as in \cite[Lemma 3.5]{P1}, shows that growing cusps have $4\mid k$. An exact check of all $k\le36$ gives: $h/k$ grows iff $12\mid k$ and $h\equiv5,7\pmod{12}$ for $\delta>0$, and $h\equiv1,11\pmod{12}$ for $\delta<0$.
+\item The suprema of $|R^{\pm1}|$ over the bounded types on $\Ima\tau'\ge1$ are at most $K_{12}=550.75$ and $K_{12}'=547.23$. These were certified by branch-and-bound.
+\item Exact Gauss sums and certified branch integers at the cusps of denominators $12$ and $24$ give the amplitudes below.
+\end{itemize}
+For $\delta>0$ the growth is $\e^{2\pi\delta/z}$ and the amplitudes are
+\[
+2\cos\frac{5\pi n}6\ (\text{main}),\qquad -2\delta\cos\frac{\pi(5n-1)}6\ (\text{first correction}),\qquad \delta(\delta+1)\cos\frac{\pi(5n-2)}6\ (\text{second correction}).
+\]
+For $\delta=-s<0$ the amplitude at $k=12$ is $2\cos\frac{\pi(n-2s)}6$, and at $k=24$ it is $2\cos\frac{\pi(n-2s)}{12}+2\cos\frac{\pi(11n+2s)}{12}$.
+
+\section{Explicit expansions and error constants}
+In every case the Rademacher dissection is carried out as in \cite[\S4]{P1}: Ford-circle arcs, chords of length at most $2\sqrt2k/(N+1)$, and $N\ge\sqrt{4\pi n}+1$. The main terms have the shape $\cP_k(B)=\frac{2\pi}k\sqrt{B/C}\,I_1(\frac{2\pi}k\sqrt{BC})$.
+\begin{itemize}[leftmargin=2em]
+\item For $G_p$: $B=\delta(p-1)/12$ for the main term, $B-2$ for the correction term, and $C=2n-\delta(p-1)/12$.
+\item For $Q_{12}$: $B=2\delta,\,2(\delta-1),\,2(\delta-2)$ for the main term and the two corrections, and $C=2(n+\delta)$.
+\end{itemize}
+The error is bounded by $\cE=\cE_{\rm arc}+\cE_{\rm rem}+\cE_{\rm ng}$. For $G_p$ these are
+\[
+\cE_{\rm arc}=\sqrt2\pi\,\tfrac{p-1}{p^2}\,\e^{1+\pi\delta(p-1)/12}(1+\delta\e^{-2\pi}[\cdot]),\qquad
+\cE_{\rm rem}=2\sqrt2\,\tfrac{p-1}{p^2}\,\e^{1+\pi\delta(p-1)/12}\big(f(t)^\delta f(t^p)^\delta-1-\delta t[\cdot]\big),\qquad
+\cE_{\rm ng}=2\sqrt2\,\e\,K_p^\delta,
+\]
+with $t=\e^{-2\pi}$, and where $[\cdot]$ means the term is included only when the correction is extracted, i.e.\ $\delta>24/(p-1)$. For $Q_{12}$ the analogues come from the majorant of the growing type. Typical values are $\cE\approx1.9\cdot10^4$ for $G_7$ at $\delta=4.87$, and $\cE\approx1.6\cdot10^3$ for $G_{11}$ at $\delta=2$.
+
+\begin{lemma}[envelopes]\label{lem:env}
+For $x>0$, $\kappa(x_0)U(x)\le I_1(x)\le U(x)$ whenever $x\ge x_0$, where $U(x)=\e^x/\sqrt{2\pi x}$ and $\kappa(x_0)=\sqrt{2\pi x_0}\,\e^{-x_0}I_1(x_0)$ \cite[Lemma 5.2]{P1}. Consequently, if every competitor term is bounded through $U$ and the dominant term from below through $\kappa U$, then each ratio competitor$/$dominant is at most $Cy^a\e^{-gy}$ with $y=\sqrt C$ and a gap $g>0$. Such a bound is decreasing for $y\ge a/g$. Hence a single verification at $n=n_1$ proves the inequality for every $n\ge n_1$.
+\end{lemma}
+All \emph{dominance} certificates below are of this form. In each, the gaps satisfy $g\ge0.1$, the exponents satisfy $a\le3$, and $y(n_1)\ge30$.
+
+\section{Proof of Theorem \ref{thm:20}}\label{sec:20}
+Throughout this section $p=7$. The main-term amplitude at a cusp of denominator $k$ ($7\mid k$) is
+\[
+a_k(n,\delta)=\sum_{h}\cos\big(-\pi\delta\,\sigma_h-2\pi hn/k\big),\qquad \sigma_h=s(h,k)-s(h,k/7),
+\]
+and the correction amplitude is
+\[
+b_k(n,\delta)=-\delta\sum_h\cos\big(-\pi\delta\sigma_h-2\pi hn/k-2\pi h'/k\big),\qquad hh'\equiv1\pmod k .
+\]
+Both sums run over the $\varphi(k)\le 6k/7$ residues $h$ coprime to $k$. With $B=\delta/2$, $B_2=\delta/2-2$ and $C=2n-\delta/2$, Lemma \ref{lem:env} and the expansion of \S4 give
+\begin{equation}\label{eq:G7exp}
+c_\delta(n)=\sum_{7\mid k\le N}\Big(a_k(n,\delta)\,\cP_k(B)+[\delta>4]\,b_k(n,\delta)\,\cP_k(B_2)\Big)+E,\qquad |E|\le\cE(\delta).
+\end{equation}
+
+\subsection{Auxiliary bounds}
+\begin{lemma}\label{lem:aux}
+Let $7\mid k$ and let $s$ lie in a compact subinterval of $(0,5]$.
+\begin{enumerate}[label=(\alph*),leftmargin=2em]
+\item $|\sigma_h|<k/12+k/84\le k/10.5$. Hence $|\partial_s(\pi s\sigma_h)|\le\pi k/10$, and $|\partial_s a_k|\le\pi k\varphi(k)/10$.
+\item On every Farey chord of order $N$, $|\Ima\log G_7|\le0.556N^2$. Moreover $|\log|G_7||\le\log K_7+0.449N^2+2$ at non-growing cusps.
+\item \emph{(arc lemma)} Let $A_s=\int_{\rm arc}\Phi(s)\exp\!\big(\pi s/(2z)+\pi(2n-s/2)z/k^2\big)dz$, taken over either small arc of $K$ from $0$. Then
+\[
+|\partial_sA_s|\le\e^{1+\pi s/2}\Big[\frac{\pi k}{10}\cdot\frac{\pi}{\sqrt2}\cdot\frac{k}{N+1}+\frac{2+\pi/2}{s/2}+\frac{\pi^2}{\sqrt2\,k(N+1)}\Big].
+\]
+The same bound holds for the correction integrand, with $s/2$ replaced by $s/2-2>0$ in the middle term and an extra factor $s\e^{-2\pi}$.
+\item \emph{(Bessel derivative)} With $x=\frac{2\pi}k\sqrt{BC}$,
+\[
+|\partial_s\log\cP_k|\le D_k:=\frac1{4B}+\frac1{4C}+\Big(1+\frac1x\Big)\frac{2\pi}k\,\frac{\sqrt C}{4\sqrt B}.
+\]
+\end{enumerate}
+\end{lemma}
+\begin{proof}
+(a) For $k\ge2$ the classical bound $|s(h,k)|\le(k-1)(k-2)/(12k)$ applies.
+
+(b) Write $\log G_7=\sum_{7\nmid m}\log(1-q^m)$ with principal logarithms, and use $|\Arg(1-x)|\le\frac\pi2|x|$ for $|x|<1$. This gives $|\Ima\log G_7|\le\frac\pi2(1-|q|)^{-1}$. On a chord $\Rea z\ge k^2/(2N^2)$, so $1-|q|\ge0.9\pi/N^2$. For $\log|G_7|$, use the transformation formula at $d=1$ together with $|\widehat G|\in[\,(f(\e^{-2\pi w/7})f(\e^{-2\pi w}))^{-1},\,f(\e^{-2\pi w/7})f(\e^{-2\pi w})\,]$, where $w=\Rea(1/z)\le2N^2/k^2$.
+
+(c) With $w=1/z=1+iv$ one has $\partial_sf_s=(i\theta+\pi w/2-\pi/(2k^2w))f_s$, where $|\theta|\le\pi k/10$ by (a). The terms $i\theta f_s$ and $\pi f_s/(2k^2w)$ are bounded by the arc length times $\e^{1+\pi s/2}$. For $\frac\pi2\int wf_s\,dz=-\frac{\pi}2\Phi\,i\,\e^{\pi s/2}\int\e^{i\pi sv/2}g(v)\,dv$, with $g=\e^{b/(1+iv)}/(1+iv)$, integrate by parts exactly as in \cite[Lemma 7.2]{P1}; this gives the factor $(2+\pi/2)/(s/2)$.
+
+(d) Differentiate $\log\cP_k$ in $s$, using $I_1'/I_1\le1+1/x$. The latter follows from $I_0=I_2+2I_1/x\le I_1+2I_1/x$.
+\end{proof}
+
+Summing (c) over the growing cusps ($7\mid k\le N$, at most $6k/7$ of them for each $k$) introduces the harmonic factor $\sum_{7\mid k\le N}1/k\le\frac17(1+\log(N/7))$. The same summation over the chords, with lengths at most $2\sqrt2k/(N+1)$, bounds the derivative of the remaining error pieces:
+\begin{itemize}[leftmargin=2em]
+\item on chords at growing cusps, by $(|\theta|+\frac\pi2|1/z|+0.1)(F_s-1-[\cdot]st)+F_s\ell_7-[\cdot]t$, where $F_s=f(t)^sf(t^7)^s$, $\ell_7=\log(f(t)f(t^7))$ and $|1/z|\le2N^2/k^2$;
+\item on chords at non-growing cusps, by $K_7^s$ times the bound of (b).
+\end{itemize}
+Together this gives an explicit quantity $\cE'(s,N)=O(N^3\log N)$, which is implemented in \texttt{g7\_deriv.py} and \texttt{g7\_eps3.py}.
+
+\subsection{Steps of the proof}
+\emph{Step 1 (exact small-$n$ computations).} The exact polynomials $c_\delta(n)\in\Q[\delta]$ were computed for $n\le897$. Descartes' rule of signs, applied after the M\"obius map of the interval to $(0,\infty)$ and with bisection, shows the following.
+\begin{itemize}[leftmargin=2em]
+\item On $[3,\delta_{\rm lo}]$ every $c_\delta(n)$ has sign $\sigma(n\bmod7)$ and no root. Where $c_3(n)=0$, the factor $(\delta-3)$ is first divided out exactly.
+\item On $[\delta_{\rm lo},\delta_{\rm hi}]$ only $c_\delta(897)$ has a root, and it has exactly one. This defines $\delta_c$.
+\item On $[2,3]$ every $c_\delta(n)$ has the pattern $+--+++-$. Zeros at $\delta=3$ are divided out, and the sign of the factor $(\delta-3)\le0$ is taken into account.
+\end{itemize}
+
+\emph{Step 2 (dominance, $n\ge898$).} Let $J=[a,b]$ be a $\delta$-interval, fix a residue $r$, and set $n_1\ge898$ with $n_1\equiv r\pmod 7$. The amplitude $a_7(r,\cdot)$ is enclosed on $J$ in centred form, $a_7(r,m)+a_7'(r,J)(J-m)$, which is exact for linear functions. Suppose
+\[
+\min_J|a_7(r,\delta)|\cdot\frac{2\pi}7\sqrt{\frac{a/2}{C_{\max}}}\,\kappa(x_1)U(x_1)\ >\ [b>4]\,6b\,\cP_7(B_2)+\sum_{k=14,21}\varphi(k)\big(\cP_k(B)+b\,\cP_k(B_2)\big)+\frac N7\cdot\frac{6N}7\,(1+b)\,\cP_{28}(B)+\cE(b),
+\]
+where $x_1=\frac{2\pi}7\sqrt{(a/2)C_{\min}}$, $C_{\min/\max}=2n_1-b/2$ resp.\ $2n_1-a/2$, and $B=b/2$ on the right.
+where every $\cP$ on the right is replaced by its upper envelope. Then $\sgn c_\delta(n)=\sgn a_7(r,\delta)$ for all $\delta\in J$ and all $n\ge n_1$ with $n\equiv r\pmod 7$, by Lemma \ref{lem:env}. Adaptive bisection certifies this on
+\[
+[2,3-10^{-9}],\qquad [3+10^{-9},\,4.87],\qquad [4.87,\,4.87350758538]
+\]
+with $n_1=898$, and on the window $W=[4.87350758538,\delta_c]$ for all residues $r\neq1$ with $n_1=898$, and for $r=1$ with $n_1=2500$.
+
+\emph{Step 3 (near $\delta=3$).}
+\begin{proposition}\label{prop:eps3}
+Let $r\in\{2,4,5\}$ and $0<|\delta-3|\le10^{-9}$. Then for every $n\ge898$ with $n\equiv r\pmod 7$, $\sgn c_\delta(n)=\sgn\big((\delta-3)\,a_7'(r,3)\big)$, which is the conjectured sign on each side of $3$.
+\end{proposition}
+\begin{proof}
+By \S\ref{sec:zeros}, $c_3(n)=0$, and $a_7(r,3)=0$ exactly; the latter was checked in $\Z[\zeta_{28}]$. Subtract \eqref{eq:G7exp} at $\delta$ and at $3$, with the same $N$. The $k=7$ term becomes $a_7(r,\delta)\cP_7(\delta/2)$, and
+\[
+|a_7(r,\delta)|\ge|\delta-3|\Big(|a_7'(r,3)|-|\delta-3|\sum_h(\pi\sigma_h)^2\Big).
+\]
+Every other difference is at most $|\delta-3|$ times a bound from Lemma \ref{lem:aux}: for $k\ge14$ this is $\varphi(k)(\pi k/10+D_k)\cP_k$, and for the error it is $\cE'(s,N)$. Dividing by $|\delta-3|$ gives a sufficient inequality that no longer involves $\delta-3$. In envelope form it is certified at $n_1=898$ with margin at least $6.7\cdot10^8$ on both sides of $3$, and by Lemma \ref{lem:env} it then holds for all $n\ge898$.
+\end{proof}
+The residues $0,1,3,6$ with $|\delta-3|\le10^{-9}$ are covered by Step 2.
+
+\emph{Step 4 (the window, residue $1$, $898\le n<2500$).}
+\begin{proposition}\label{prop:window}
+For every $n\ge898$ with $n\equiv1\pmod7$ and every $\delta\in[4.87350758538,\delta_{\rm hi}]$, we have $\partial_\delta c_\delta(n)>0$.
+\end{proposition}
+\begin{proof}
+Differentiate \eqref{eq:G7exp}. The dominant contribution is $a_7'(1,\delta)\cP_7(\delta/2)$, where $a_7'(1,\delta)>0.15$ on the interval. Against it:
+\begin{itemize}[leftmargin=2em]
+\item the term $|a_7(1,\delta)|\,|\partial_s\cP_7|$, with $|a_7(1,\delta)|\le10^{-11}$ on the interval; its ratio to the dominant term is bounded by its value at $n=2500$;
+\item the correction at $k=7$, whose amplitude derivative is at most $6+6\delta\pi\cdot\frac5{14}$;
+\item the terms with $k\ge14$;
+\item $\cE'$.
+\end{itemize}
+The resulting inequality is certified in envelope form at $n_1=898$ with margin $3.6\cdot10^{10}$.
+\end{proof}
+
+The values $c_{\delta_{\rm hi}}(n)$ are certified negative for all $n\le7000$ with $n\equiv1\pmod7$, $n\ne897$; this used a $3000$-bit ball recurrence. For $898\le n<2500$, $n\equiv1\pmod7$, Proposition \ref{prop:window} then gives $c_\delta(n)<c_{\delta_{\rm hi}}(n)<0$ for all $\delta\in[4.87350758538,\delta_c]$. For $n\ge2500$, Step 2 applies.
+
+\emph{Step 5 ($\delta=1,3,5$).} This is Step 2 at a single point with $n_1=400$, together with exact integer coefficients for $n\le400$. At $\delta=5$, $a_k(r,5)=0$ for $k=7,14,21$ and $r\equiv1,2,6\pmod7$, exactly. There the dominant term is $b_7(r,5)\cP_7(1/2)$, whose Bessel argument $\frac{2\pi}7\sqrt{C/2}$ exceeds that of every remaining term.
+
+\emph{Step 6 (failure on $(\delta_c,5)$).}
+\begin{itemize}[leftmargin=2em]
+\item For $\delta\in(\delta_c,\delta_{\rm hi}]$, $c_\delta(897)>0$, because $\delta_c$ is its only root in $[\delta_{\rm lo},\delta_{\rm hi}]$.
+\item On $[\delta_{\rm hi},4.87350758538675509]$, an interval containing $\delta^*$, the exact polynomial $c_\delta(897)$ is positive at both endpoints and has no sign variation (Descartes count $0$). So it is positive throughout.
+\item For $\delta\in(\delta^*,5)$, $a_7(1,\delta)>0$. By \eqref{eq:G7exp} and Lemma \ref{lem:env}, $c_\delta(n)>0$ for all sufficiently large $n\equiv1\pmod 7$.
+\end{itemize}
+In every case the pattern requires a minus sign at such $n$. For instance, $c_{49/10}(57)>0$ by exact rational arithmetic. \qed
+
+\section{Proof of Theorem \ref{thm:23}}\label{sec:23}
+On $[\gamma,2]$ the $k=11$ amplitude has no zero, and the smallest amplitude occurs at residue $10$ near $\gamma$. Dominance holds for all $n\ge300$ on $[1.7584,2]$. For $n\le310$ the exact polynomials have the pattern on $[\gamma,2]$. For this check $c_\delta(21)$ is divided by its degree-$18$ irreducible factor, which vanishes at $\gamma$ and has no other root in $[\gamma,2]$, and the zeros at $\delta=2$ are divided out exactly. For $\delta=1,3$ we use dominance for $n\ge600$ and exact integers for $n\le600$; the forced zeros are those of \S\ref{sec:zeros}. \qed
+
+\section{Proof of Theorem \ref{thm:24}}
+\emph{$2\le\delta\le3$.} The main amplitude $2\cos(5\pi n/6)$ vanishes at $n\equiv3,9\pmod{12}$. There the first correction, with amplitude $\mp\delta$, decides the sign. Its Bessel argument exceeds that of the $k=24$ main term whenever $\delta>4/3$, so no threshold phenomenon occurs. The criterion is verified explicitly for every $400\le n\le20000$ on $8$ subintervals of $\delta$; the tail $n>20000$ is handled on $40$ subintervals; and exact polynomials cover $n\le400$.
+
+\emph{$\delta=\pm1$.} Dominance for $n\ge181$, exact integer coefficients for $n\le400$, and forced zeros by \cite{AB}.
+
+\emph{$-1<\delta\le\delta_1$.} This is the argument of \cite[\S7]{P1} with the following changes.
+\begin{itemize}[leftmargin=2em]
+\item The growing cusps are $h\equiv1,11\pmod{12}$ with $12\mid k$.
+\item The main-term Bessel data are $B=2s$, $C=2(n-s)$, and the amplitude is $2\cos(\pi(n-2s)/6)$. Near $s=1$ this equals $\mp2\sin(\pi\varepsilon/3)$ at $n\equiv5,11\pmod{12}$.
+\item The phase bound is $|\theta_{h,k}|\le k^2/2+0.01$, the minor-arc constant is $K'_{12}$, and the arc lemma carries the frequency $2\pi s$, which contributes the term $(2+\pi/2)/s_0$.
+\item The chord bound is $(k^2/2+4\pi N^2/k^2+0.2)(\widetilde F_1-1)+\widetilde F_1\ell$, and the non-growing derivative bound is $2\sqrt2\,\e K'_{12}(\log K_{12}+0.02+0.556N^2)$.
+\end{itemize}
+Every sum over $k$ is evaluated explicitly for each $n$ (\texttt{q12\_neg.py}), so no harmonic factor is lost. At $\delta=-1$ the coefficients with $n\equiv5,11\pmod{12}$ vanish identically. The $\varepsilon$-difference criterion of \cite[\S7]{P1} is uniform in $\varepsilon=\delta+1\in(0,0.356]$. It is verified for $774\le n\le20000$, and the tail is handled analytically. Exact polynomials on $[-1,\delta_1^+]$ cover $n\le780$: the only root in the interval is that of $c_\delta(22)$ at $\delta_1$. Since $c_\delta(22)$ has the wrong sign on all of $(\delta_1,0)$, the pattern fails there. \qed
+
+\section{Computations}
+All certified steps use either exact arithmetic (FLINT) or ball arithmetic (Arb), via python-flint 0.9.0. A table of scripts is included in the accompanying repository.
+\begin{itemize}[leftmargin=2em]
+\item \emph{Heaviest runs.} The exact root isolations for $G_7$ with $n\le897$ took about $20$ minutes per interval, and the computation of the degree-$897$ polynomials took $3$ minutes.
+\item \emph{Independent check.} As a check on the Descartes computations for $G_7$ on $[2,3]$, a separate complex-root isolation was run for $n\le160$. It agrees.
+\item \emph{Mathematical inputs.} The only inputs beyond those of \cite{P1} are the classical eta transformation (with the corrected convention, certified in Lemma \ref{lem:branch}), Euler's and Jacobi's identities, and \cite{AB}.
+\end{itemize}
+
+\begin{thebibliography}{9}
+\bibitem{AB} G. E. Andrews and D. M. Bressoud, \emph{Vanishing coefficients in infinite product expansions}, J. Austral. Math. Soc. Ser. A \textbf{27} (1979), 199--202.
+\bibitem{BHK} K. Bringmann, B. Heim and B. Kane, \emph{On a sign-change conjecture of Schlosser and Zhou}, J. Math. Anal. Appl. \textbf{548} (2025).
+\bibitem{HL} B. He and L. Li, \emph{Some conjectures of Schlosser and Zhou on sign patterns of the coefficients of infinite products}, arXiv:2509.10023.
+\bibitem{P1} J. S. Padhi, \emph{Sign patterns of real powers of the G\"ollnitz--Gordon product: a complete resolution of a conjecture of Schlosser and Zhou}, preprint.
+\bibitem{SZ} M. J. Schlosser and N. H. Zhou, \emph{On the infinite Borwein product raised to a positive real power}, Ramanujan J. \textbf{61} (2023), 515--543.
+\bibitem{W} L. Wang, \emph{Sign changes of coefficients of powers of the infinite Borwein product}, Adv. in Appl. Math. \textbf{141} (2022), 102405.
+\end{thebibliography}
+\end{document}

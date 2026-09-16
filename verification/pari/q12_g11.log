@@ -1,0 +1,5 @@
+Q12 [2,3], n<=400: List([])
+Q12 [-1,delta1+], n<=780 (expect only n=22): List([[22, 1, -1, -1]])
+c22 roots in [-1,delta1+]: 1  sign at -1: -1
+G11: degree-18 factor found: 1  its roots in [1.7584535519419,2]: 1
+G11 [gamma_lo,2], n<=310: List([])

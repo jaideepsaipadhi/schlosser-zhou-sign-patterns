@@ -1,0 +1,5 @@
+n=0..500 on [2.0,3.0]: divided at A for 214 indices; problems []; 60s
+n=501..680 on [2.0,3.0]: divided at A for 77 indices; problems []; 43s
+n=681..790 on [2.0,3.0]: divided at A for 48 indices; problems []; 32s
+n=791..865 on [2.0,3.0]: divided at A for 32 indices; problems []; 30s
+n=866..897 on [2.0,3.0]: divided at A for 13 indices; problems []; 14s

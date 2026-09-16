@@ -1,0 +1,31 @@
+nohup: ignoring input
+orbit size 48 edges 96
+T-cycles: 10
+len  1  J1=10 J5= 2  exp=(J1^2-J5^2)/96= 1.000  GROW(-)  supp1=[10, 14] supp5=[2, 22]  all moduli equal: True
+len 12  J1= 1 J5= 1  exp=(J1^2-J5^2)/96= 0.000  flat     supp1=[1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23] supp5=[1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23]  all moduli equal: False
+len  6  J1= 0 J5= 0  exp=(J1^2-J5^2)/96= 0.000  flat     supp1=[0, 4, 8, 16, 20, 24] supp5=[0, 4, 8, 16, 20, 24]  all moduli equal: False
+len  4  J1= 1 J5= 1  exp=(J1^2-J5^2)/96= 0.000  flat     supp1=[1, 5, 7, 11, 13, 17, 19, 23] supp5=[1, 5, 7, 11, 13, 17, 19, 23]  all moduli equal: True
+len  3  J1= 2 J5= 2  exp=(J1^2-J5^2)/96= 0.000  flat     supp1=[2, 6, 10, 14, 18, 22] supp5=[2, 6, 10, 14, 18, 22]  all moduli equal: True
+len 12  J1= 1 J5= 1  exp=(J1^2-J5^2)/96= 0.000  flat     supp1=[1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23] supp5=[1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23]  all moduli equal: False
+len  2  J1= 4 J5= 4  exp=(J1^2-J5^2)/96= 0.000  flat     supp1=[4, 8, 16, 20] supp5=[4, 8, 16, 20]  all moduli equal: True
+len  3  J1= 2 J5= 2  exp=(J1^2-J5^2)/96= 0.000  flat     supp1=[2, 6, 10, 14, 18, 22] supp5=[2, 6, 10, 14, 18, 22]  all moduli equal: True
+len  4  J1= 1 J5= 1  exp=(J1^2-J5^2)/96= 0.000  flat     supp1=[1, 5, 7, 11, 13, 17, 19, 23] supp5=[1, 5, 7, 11, 13, 17, 19, 23]  all moduli equal: True
+len  1  J1= 2 J5=10  exp=(J1^2-J5^2)/96=-1.000  GROW(+)  supp1=[2, 22] supp5=[10, 14]  all moduli equal: True
+growing for delta>0: [(5, 12), (5, 24), (5, 36), (7, 12), (7, 24), (7, 36), (17, 24), (17, 36), (19, 24), (19, 36), (29, 36), (31, 36)]
+growing for delta<0: [(1, 12), (1, 24), (1, 36), (11, 12), (11, 24), (11, 36), (13, 24), (13, 36), (23, 24), (23, 36), (25, 36), (35, 36)]
+(+) <=> 12|k, h=5,7 mod 12: True
+(-) <=> 12|k, h=1,11 mod 12: True
+types: [(0, 0), (1, 1), (2, 2), (2, 10), (4, 4), (10, 2)]
+c_{-1/4}(6) = 545/65536  (pattern requires sign -)
+smallest root in (-1,0) among c_n, n<=260: delta=-0.644113480813477 at n=22
+100 0s
+200 0s
+300 1s
+400 4s
+500 11s
+600 33s
+700 64s
+800 134s
+sign at lo,hi: False True
+Descartes sign variations on (lo,hi): 1  (1 => exactly one root)  236s
+done

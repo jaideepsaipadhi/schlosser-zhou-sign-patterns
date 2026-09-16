@@ -1,0 +1,2 @@
+delta=+1: nonzero residues, failures up to 20000: 125, last [172, 176, 178]
+delta=-1: nonzero residues, failures up to 20000: 127, last [174, 178, 180]

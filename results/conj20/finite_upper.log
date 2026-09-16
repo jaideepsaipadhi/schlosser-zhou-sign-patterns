@@ -1,0 +1,8 @@
+n=0..500 on [3.0,4.873507585386735]: divided at A for 214 indices; problems []; 162s
+n=501..600 on [3.0,4.873507585386735]: divided at A for 44 indices; problems []; 152s
+n=601..680 on [3.0,4.873507585386735]: divided at A for 33 indices; problems []; 179s
+n=681..740 on [3.0,4.873507585386735]: divided at A for 27 indices; problems []; 180s
+n=741..790 on [3.0,4.873507585386735]: divided at A for 21 indices; problems []; 148s
+n=791..830 on [3.0,4.873507585386735]: divided at A for 17 indices; problems []; 235s
+n=831..865 on [3.0,4.873507585386735]: divided at A for 15 indices; problems []; 204s
+n=866..897 on [3.0,4.873507585386735]: divided at A for 13 indices; problems []; 219s

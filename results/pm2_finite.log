@@ -1,0 +1,2 @@
+delta=+2: coefficients n<=400 violating/zero vs pattern +-++-+--+--+-++-: []
+delta=-2: coefficients n<=400 violating/zero vs pattern +++++----+++----: [8]

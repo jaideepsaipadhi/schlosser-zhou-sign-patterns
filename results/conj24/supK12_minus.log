@@ -1,0 +1,10 @@
+type (1,1) L=12 lower=536.49353 cert_upper=547.22282 tail=4.36710 boxes=203088
+type (0,0) L= 6 lower=3.98419 cert_upper=4.06365 tail=1.00649 boxes=1053
+type (1,1) L= 4 lower=1.57063 cert_upper=1.60065 tail=1.00016 boxes=742
+type (2,2) L= 3 lower=1.24181 cert_upper=1.26603 tail=1.00001 boxes=639
+type (1,1) L=12 lower=1.00000 cert_upper=1.01995 tail=0.30946 boxes=2871
+type (4,4) L= 2 lower=1.09033 cert_upper=1.11213 tail=1.00000 boxes=15647
+type (2,2) L= 3 lower=1.24181 cert_upper=1.26661 tail=1.00001 boxes=657
+type (1,1) L= 4 lower=1.57063 cert_upper=1.60035 tail=1.00016 boxes=700
+type (10,2) L= 1 lower=0.00187 cert_upper=0.00191 tail=0.00000 boxes=1216
+K12 (sgn=-1) certified upper bound = 547.222822

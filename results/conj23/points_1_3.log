@@ -1,0 +1,2 @@
+delta=1 large n>=600 all ok: True margins ['[2.26e+3 +/- 4.60]', '[2.60e+3 +/- 1.20]', '[1.80e+3 +/- 4.82]', '[3.99e+2 +/- 0.120]', '[1.42e+3 +/- 3.01]', '[1.07e+3 +/- 0.942]']; exact n<=600 violations [] extra zeros [4, 26]
+delta=3 large n>=600 all ok: True margins ['[4.70e+5 +/- 69.2]', '[1.39e+6 +/- 2.70e+3]', '[2.26e+6 +/- 2.91e+3]', '[1.75e+6 +/- 4.05e+3]', '[2.57e+6 +/- 4.38e+3]', '[3.12e+6 +/- 4.91e+2]']; exact n<=600 violations [] extra zeros [4]

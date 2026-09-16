@@ -1,0 +1,2 @@
+p=7 sigma=-1: max |(LHS-RHS)/2pi i| <= 9.38e-20 ; |.|<1/2 at all cusps (=> branch integer 0): True
+p=7 sigma=+1: max |(LHS-RHS)/2pi i| <= 5.79e-04 ; |.|<1/2 at all cusps (=> branch integer 0): True

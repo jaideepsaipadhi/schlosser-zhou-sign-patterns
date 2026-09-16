@@ -1,0 +1,6 @@
+h/k=1/8 supp(S3)=[2, 14, 18] supp(S1)=[6, 10]  c'=zeta_128^8  Arg/pi=[0.125000 +/- 3e-11]  m'=0 (certified True)  phase/pi=[0.250000 +/- 3e-11]
+h/k=7/8 supp(S3)=[2, 14, 18] supp(S1)=[6, 10]  c'=zeta_128^56  Arg/pi=[0.875000 +/- 3e-11]  m'=-1 (certified True)  phase/pi=[-0.250000 +/- 1e-11]
+h/k=1/16 supp(S3)=[2, 14, 18] supp(S1)=[6, 10]  c'=zeta_256^8  Arg/pi=[0.0625000 +/- 3e-12]  m'=0 (certified True)  phase/pi=[0.125000 +/- 3e-11]
+h/k=7/16 supp(S3)=[2, 14, 18] supp(S1)=[6, 10]  c'=zeta_256^184  Arg/pi=[-0.562500 +/- 3e-11]  m'=0 (certified True)  phase/pi=[-0.125000 +/- 3e-11]
+h/k=9/16 supp(S3)=[2, 14, 18] supp(S1)=[6, 10]  c'=zeta_256^200  Arg/pi=[-0.437500 +/- 3e-11]  m'=0 (certified True)  phase/pi=[0.125000 +/- 1e-11]
+h/k=15/16 supp(S3)=[2, 14, 18] supp(S1)=[6, 10]  c'=zeta_256^120  Arg/pi=[0.937500 +/- 3e-11]  m'=-1 (certified True)  phase/pi=[-0.125000 +/- 1e-11]
