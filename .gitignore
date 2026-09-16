@@ -11,3 +11,10 @@ paper/*.fdb_latexmk
 code/**/*.pkl
 venv/
 sz-certificates.tar.gz
+/*.py
+/*.json
+/*.jsonl
+/*.tar.gz
+/paper.tex
+/paper.pdf
+/krylov-wang-conj16/
